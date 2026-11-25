@@ -1,0 +1,66 @@
+/* 4. Minimalist Top Bar Styling */
+.appleLikeNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbarInner {
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  overflow-x: auto;
+}
+
+.navItem {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1c1c1c;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.navItem:hover,
+.navItem.isActive {
+  color: #111827;
+  font-weight: 500;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.iconBtn {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/*                                      H E R O -  S E C T I O N         */
+.box {
+    border: 1px solid black;
+}
