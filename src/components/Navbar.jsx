@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LocationPicker from "./LocationPicker";
 import styles from "./Navbar.module.css";
 const navItems = [
   { label: "Events", href: "/Events" },
@@ -15,16 +16,6 @@ export default function Navbar() {
 
   return (
     <>
-    <div className={styles.topBar}>
-        <div className={styles.topLeft}>
-          <span> developer | Neuvirio</span>
-          <span>Easy access to fun</span>
-        </div>
-        <div className={styles.topRight}>
-          <a href="/support">Help &amp; support</a>
-          
-        </div>
-    </div>
     <div className={styles.appleLikeNavbar}>
       <div className={styles.navbarInner}>
         <Link href="/" className={styles.brandLink} aria-label="Leizoure Home">
@@ -46,6 +37,7 @@ export default function Navbar() {
           })}
         </nav>
         <div className={styles.navActions}>
+          <LocationPicker />
           <Link href="/search" className={styles.iconBtn} aria-label="Search">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"width="24"height="24" fill="none">            <circle cx="21" cy="21" r="12" stroke="currentColor" strokeWidth="3.2"/>
              <path d="M30 30L40 40" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" />
