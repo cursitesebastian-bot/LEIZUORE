@@ -76,7 +76,7 @@
   left: 10%;
   --expand-origin: left center;
   --tilt: -7deg;
-  --poster-image: url("https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=85");
+  --poster-image: url("https://i.pinimg.com/1200x/39/d4/53/39d4534b8ff79ca4428eb89138192fc0.jpg");
   --poster-wash: rgba(68, 66, 66, 0.48);
  
 }
@@ -86,8 +86,8 @@
   right: 8%;
   --expand-origin: right center;
   --tilt: 5deg;
-  --poster-image: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.32);
+  --poster-image: url("https://i.pinimg.com/1200x/f1/d5/45/f1d545e18f5dac08858e6c65fa92fd3b.jpg");
+  --poster-wash: rgba(12, 12, 12, 0);
   
 }
 
@@ -96,8 +96,8 @@
   left: 5%;
   --expand-origin: left center;
   --tilt: 4deg;
-  --poster-image: url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(134, 131, 131, 0.48);
+  --poster-image: url("https://i.pinimg.com/1200x/18/d0/3c/18d03c1a5d5c3a4ad989a996abdf1543.jpg");
+  --poster-wash: rgba(134, 131, 131, 0);
  
   color: #17141b;
 }
@@ -108,7 +108,7 @@
   --expand-origin: right center;
   --tilt: -5deg;
   --poster-image: url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.32);
+  --poster-wash: rgba(12, 12, 12, 0);
   
 }
 
@@ -119,19 +119,11 @@
   width: 190px;
   height: 208px;
   --tilt: -4deg;
-  --poster-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.34);
+  --poster-image: url("https://i.pinimg.com/1200x/23/56/00/235600b40d04618d05809341a8b166f8.jpg");
+  --poster-wash: rgba(12, 12, 12, 0);
 }
 
-.cocktail {
-  right: 11%;
-  bottom: 36%;
-  width: 148px;
-  height: 158px;
-  --tilt: 3deg;
-  --poster-image: url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.32);
-}
+
 .dinner {
   right: 6%;
   bottom: 9%;
@@ -140,18 +132,8 @@
   height: 196px;
   --tilt: -3deg;
   --poster-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.32);
+  --poster-wash: rgba(12, 12, 12, 0);
  
-}
-
-.runClub {
-  bottom: -7%;
-  left: -2%;
-  width: 162px;
-  height: 200px;
-  --tilt: 5deg;
-  --poster-image: url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=500&q=85");
-  --poster-wash: rgba(12, 12, 12, 0.32);
 }
 
 @media (min-width: 1320px) {

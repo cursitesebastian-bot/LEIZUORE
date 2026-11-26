@@ -15,15 +15,6 @@
   padding: 0 32px;
 }
 
-.eyebrow {
-  margin: 0 0 5px;
-  color: #a7a2aa;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
 .sectionHeader h2 {
   margin: 0;
   font-size: clamp(20px, 2.4vw, 28px);
@@ -45,7 +36,7 @@
 .locationSummary {
   flex: 0 0 auto;
   padding: 7px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(90, 88, 88, 0.312);
   border-radius: 999px;
   background: #111;
   color: #e4e1e4;
@@ -144,7 +135,8 @@
   width: 15px;
   height: 15px;
   flex: 0 0 auto;
-  color: #c17bff;
+  color: #cf26c5;
+ 
 }
 
 .venue span {

@@ -9,7 +9,7 @@ export const mockEvents = [
     province: "Bagmati",
     startsAt: "2026-12-06T17:30:00+05:45",
     posterUrl:
-      "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=700&q=85",
+      "https://i.pinimg.com/1200x/23/56/00/235600b40d04618d05809341a8b166f8.jpg",
   },
   {
     id: "lalitpur-garden-music",
@@ -21,7 +21,7 @@ export const mockEvents = [
     province: "Bagmati",
     startsAt: "2026-12-12T18:00:00+05:45",
     posterUrl:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=85",
+      "https://i.pinimg.com/1200x/39/d4/53/39d4534b8ff79ca4428eb89138192fc0.jpg",
   },
   {
     id: "lalitpur-art-market",
@@ -33,7 +33,7 @@ export const mockEvents = [
     province: "Bagmati",
     startsAt: "2026-12-13T11:00:00+05:45",
     posterUrl:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=85",
+      "https://images.unsplash.com/photo-1615500025837-cf3a8716c83d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
   },
   {
     id: "lalitpur-food-festival",
@@ -48,16 +48,16 @@ export const mockEvents = [
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=85",
   },
   {
-    id: "patan-art-fair",
+    id: "astrek climbing",
     kind: "Event",
-    title: "Patan Art & Craft Fair",
+    title: "climbing",
     venue: "Mangal Bazaar",
     city: "Lalitpur",
     district: "Lalitpur",
     province: "Bagmati",
     startsAt: "2026-12-21T10:00:00+05:45",
     posterUrl:
-      "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=700&q=85",
+      "https://i.pinimg.com/1200x/f1/d5/45/f1d545e18f5dac08858e6c65fa92fd3b.jpg",
   },
   {
     id: "patan-open-air-music",
@@ -72,7 +72,7 @@ export const mockEvents = [
       "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=85",
   },
   {
-    id: "lalitpur-football-cup",
+    id: "football-cup",
     kind: "Activity",
     title: "Lalitpur Weekend Football Cup",
     venue: "Satdobato Sports Complex",

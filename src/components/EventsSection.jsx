@@ -88,7 +88,6 @@ export default function EventsSection() {
     <section className={styles.section} aria-labelledby="events-heading">
       <div className={styles.sectionHeader}>
         <div>
-          <p className={styles.eyebrow}>Local picks · Demo listings</p>
           <h2 id="events-heading">Events &amp; activities around you</h2>
           <p className={styles.scope}>
             {location
