@@ -88,7 +88,7 @@ export default function EventsSection() {
     <section className={styles.section} aria-labelledby="events-heading">
       <div className={styles.sectionHeader}>
         <div>
-          <h2 id="events-heading">Events &amp; activities around you</h2>
+          <h2 id="events-heading">Events &amp;</h2>
           <p className={styles.scope}>
             {location
               ? currentFeed?.scopeLabel || `${location.city}, ${location.district}, ${location.province}`
