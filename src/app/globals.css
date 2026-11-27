@@ -6,12 +6,12 @@
 
 html {
   scroll-behavior: smooth;
-  background: #000;
+  background: #111111;
 }
 
 body {
   margin: 0;
-  background: #000;
+  background: #111111;
   color: #fff;
   font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif;
   -webkit-font-smoothing: antialiased;

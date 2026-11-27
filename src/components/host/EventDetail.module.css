@@ -1,0 +1,181 @@
+.summary {
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+}
+
+.summary > p {
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.cards > div {
+  display: grid;
+  gap: 6px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.cards p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cards strong {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.cards small {
+  color: var(--muted);
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.bar {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line-quiet);
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: #fff;
+}
+
+.bookings {
+  display: grid;
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.bookingsHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bookingsHead h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.controls {
+  display: grid;
+  gap: 16px;
+}
+
+.tableWrap {
+  border: 1px solid var(--line-quiet);
+  border-radius: 20px;
+  background: var(--card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th {
+  padding: 14px 16px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding: 14px 16px;
+  border-top: 1px solid var(--line-quiet);
+  vertical-align: top;
+}
+
+.table td strong,
+.table td span {
+  display: block;
+}
+
+.table td span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Phones: each booking becomes a small card instead of a sideways-scrolling table */
+@media (max-width: 699px) {
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+  }
+
+  .table tr {
+    padding: 12px 0;
+    border-top: 1px solid var(--line-quiet);
+  }
+
+  .table tr:first-child {
+    border-top: 0;
+  }
+
+  .table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 16px;
+    border: 0;
+  }
+
+  .table td::before {
+    color: var(--muted);
+    content: attr(data-label);
+  }
+
+  .table td:first-child {
+    display: block;
+    font-size: 16px;
+  }
+
+  .table td:first-child::before {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .controls {
+    grid-template-columns: minmax(0, 320px) auto;
+    align-items: end;
+  }
+}

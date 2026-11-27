@@ -6,7 +6,7 @@
   place-items: center;
   overflow: hidden;
   padding: 64px 24px;
-  background: #000;
+  background: #111111;
 }
 .posterField {
   position: absolute;
@@ -28,7 +28,6 @@
   width: 190px;
   height: 300px;
   padding: 13px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 17px;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55),inset 0 1px 0 rgba(255, 255, 255, 0.3);
   color: #fff;

@@ -1,7 +1,7 @@
 .section {
   padding: 28px 0 34px;
   overflow: hidden;
-  background: #000;
+  background: #111111;
   color: #fff;
 }
 
@@ -36,8 +36,6 @@
 .locationSummary {
   flex: 0 0 auto;
   padding: 7px 10px;
-  border: 1px solid rgba(90, 88, 88, 0.312);
-  border-radius: 999px;
   background: #111;
   color: #e4e1e4;
   font-size: 11px;
@@ -53,16 +51,14 @@
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 1px solid #333;
   border-radius: 50%;
-  background: #101010;
+  background: #000000;
   color: #fff;
   cursor: pointer;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .railButton:hover {
-  border-color: #777;
   background: #1b1b1b;
 }
 
@@ -102,9 +98,8 @@
   flex: 0 0 clamp(150px, 16vw, 190px);
   min-width: 0;
   overflow: hidden;
-  border: 1px solid #242424;
   border-radius: 16px;
-  background: #090909;
+  background: #151515;
   scroll-snap-align: start;
 }
 

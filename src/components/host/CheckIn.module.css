@@ -1,0 +1,161 @@
+.scanner {
+  display: grid;
+  gap: 16px;
+}
+
+.video,
+.idle {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 70vh;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.video {
+  object-fit: cover;
+}
+
+.idle {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 20px;
+  min-height: 200px;
+  aspect-ratio: auto;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.idle p {
+  max-width: 28ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.count strong {
+  color: var(--text);
+}
+
+/* Full-screen feedback: readable at arm's length, never colour-only (glyph + words) */
+.result {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  padding: 32px;
+  border: 0;
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.result strong {
+  font-size: clamp(40px, 12vw, 72px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.result span {
+  font-size: 18px;
+}
+
+.result small {
+  margin-top: 16px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.result .glyph {
+  font-size: clamp(96px, 30vw, 160px);
+  line-height: 1;
+}
+
+.valid {
+  background: #4ade80;
+  color: #052e16;
+}
+
+.invalid {
+  background: #ff6b7a;
+  color: #2b0509;
+}
+
+.warn {
+  background: #fbbf24;
+  color: #2a1c00;
+}
+
+.result:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: -8px;
+}
+
+.manual {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.manual h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.guests {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guests li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line-quiet);
+  border-radius: 20px;
+  background: var(--card);
+}
+
+.guests strong,
+.guests div > span {
+  display: block;
+}
+
+.guests div > span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.done {
+  color: var(--ok);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .video,
+  .idle {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

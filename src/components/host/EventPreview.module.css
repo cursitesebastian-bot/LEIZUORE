@@ -1,0 +1,123 @@
+.preview {
+  display: grid;
+  gap: 24px;
+}
+
+.caption {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* Same look as the featured card on the landing page: image, dark gradient, text at the bottom */
+.card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #151317;
+  box-shadow: var(--shadow);
+}
+
+.card::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image: var(--cover, none);
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+.card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.1) 100%);
+  content: "";
+}
+
+.card h3 {
+  margin: 4px 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.price {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.page {
+  padding: 24px;
+  border: 1px solid var(--line-quiet);
+  border-radius: 24px;
+  background: var(--card);
+}
+
+.page h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.host,
+.meta {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about {
+  margin: 16px 0;
+  white-space: pre-line;
+  font-size: 15px;
+}
+
+.tickets {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tickets li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border: 1px solid var(--line-quiet);
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 800px) {
+  .preview {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
