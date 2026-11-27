@@ -1,0 +1,463 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: calc(100svh - 40px);
+  place-items: center;
+  overflow: hidden;
+  padding: 64px 24px;
+  background: #111111;
+}
+.posterField {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+}
+
+.posterGroup {
+  display: contents;
+}
+
+.poster {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 190px;
+  height: 300px;
+  padding: 13px 12px;
+  border-radius: 17px;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55),inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(var(--tilt, 0deg));
+  transform-origin: var(--expand-origin, center);
+  transition: flex-grow 400ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+.poster::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  background:linear-gradient(var(--poster-wash), var(--poster-wash)), var(--poster-image);
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+
+.posterTitle,
+.posterNote {
+  position: relative;
+  z-index: 1;
+}
+
+.posterTitle {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+}
+
+.posterNote {
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.bookTalk {
+  top: 10%;
+  left: 10%;
+  --expand-origin: left center;
+  --tilt: -7deg;
+  --poster-image: url("https://i.pinimg.com/1200x/39/d4/53/39d4534b8ff79ca4428eb89138192fc0.jpg");
+  --poster-wash: rgba(68, 66, 66, 0.48);
+ 
+}
+
+.ninety {
+  top: 4%;
+  right: 8%;
+  --expand-origin: right center;
+  --tilt: 5deg;
+  --poster-image: url("https://i.pinimg.com/1200x/f1/d5/45/f1d545e18f5dac08858e6c65fa92fd3b.jpg");
+  --poster-wash: rgba(12, 12, 12, 0);
+  
+}
+
+.humanRobot {
+  top: 29%;
+  left: 5%;
+  --expand-origin: left center;
+  --tilt: 4deg;
+  --poster-image: url("https://i.pinimg.com/1200x/18/d0/3c/18d03c1a5d5c3a4ad989a996abdf1543.jpg");
+  --poster-wash: rgba(134, 131, 131, 0);
+ 
+  color: #17141b;
+}
+
+.barbecue {
+  top: 28%;
+  right: 5%;
+  --expand-origin: right center;
+  --tilt: -5deg;
+  --poster-image: url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=85");
+  --poster-wash: rgba(12, 12, 12, 0);
+  
+}
+
+.hackathon {
+  bottom: 13%;
+  left: 8%;
+  --expand-origin: left center;
+  width: 190px;
+  height: 208px;
+  --tilt: -4deg;
+  --poster-image: url("https://i.pinimg.com/1200x/23/56/00/235600b40d04618d05809341a8b166f8.jpg");
+  --poster-wash: rgba(12, 12, 12, 0);
+}
+
+
+.dinner {
+  right: 6%;
+  bottom: 9%;
+  --expand-origin: right center;
+  width: 168px;
+  height: 196px;
+  --tilt: -3deg;
+  --poster-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=85");
+  --poster-wash: rgba(12, 12, 12, 0);
+ 
+}
+
+@media (min-width: 1320px) {
+  .poster {
+    position: relative;
+    inset: auto;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    border-radius: 24px;
+    transform: none;
+    transition: flex-grow 400ms ease, box-shadow 220ms ease;
+  }
+
+  .posterGroup {
+    position: absolute;
+    top: 7%;
+    display: flex;
+    gap: clamp(8px, 0.7vw, 16px);
+    width: min(31vw, 640px, calc(50% - 304px));
+    height: 86%;
+  }
+
+  .leftPosters {
+    left: 1.5%;
+  }
+
+  .rightPosters {
+    right: 1.5%;
+    flex-direction: row-reverse;
+  }
+
+  .poster:hover,
+  .poster:focus-within {
+    z-index: 2;
+    flex-grow: 2.4;
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.65);
+  }
+
+  .posterTitle,
+  .posterNote {
+    display: none;
+  }
+
+  .cocktail,
+  .runClub {
+    display: none;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  text-align: center;
+}
+.title {
+  margin: 0;
+  color: #f7f6f7;
+  font-size:50px;
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  line-height: 0.90;
+}
+.miti{
+  font-size: 30px;
+}
+
+.title span {
+  width:100%;
+  display: inline-block;
+  background: linear-gradient(95deg, #cf26c5 10%, #f45165 53%, #ff9a24 94%);
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  max-width: 470px;
+  margin: 10px auto 28px;
+  color: #aaa7ad;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.cta {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: #171519;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  background: #f1e9f2;
+}
+
+.poster:hover,
+.poster:focus-within {
+  z-index: 2;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.65);
+}
+
+.posterLink {
+  position: absolute;
+  z-index: 1;
+  bottom: 14px;
+  left: 50%;
+  width: max-content;
+  max-width: calc(100% - 12px);
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #fff;
+  color: #171519;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.poster:hover .posterLink,
+.poster:focus-within .posterLink {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.posterLink:focus-visible {
+  outline: 2px solid #171519;
+  outline-offset: 3px;
+}
+
+@media (min-width: 641px) and (max-width: 1319px) {
+  .heroContent {
+    width: min(38vw, 400px);
+  }
+
+  .title {
+    font-size: clamp(32px, 4.4vw, 48px);
+  }
+
+  .miti {
+    font-size: clamp(20px, 2.4vw, 28px);
+  }
+
+  .description {
+    max-width: 100%;
+    margin: 8px auto 18px;
+    font-size: clamp(11px, 1vw, 13px);
+  }
+
+  .cta {
+    min-height: 40px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+
+  .posterGroup {
+    position: absolute;
+    top: 7%;
+    display: flex;
+    gap: clamp(6px, 0.65vw, 12px);
+    width: min(31vw, calc(50% - 19vw - 20px), 350px);
+    height: 86%;
+  }
+
+  .leftPosters {
+    left: 1.5%;
+  }
+
+  .rightPosters {
+    right: 1.5%;
+    flex-direction: row-reverse;
+  }
+
+  .poster {
+    position: relative;
+    inset: auto;
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    border-radius: 20px;
+    transform: none;
+    transition: flex-grow 400ms ease, box-shadow 220ms ease;
+  }
+
+  .poster:hover,
+  .poster:focus-within,
+  .poster:active {
+    z-index: 2;
+    flex-grow: 2.4;
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.65);
+  }
+
+  .posterTitle,
+  .posterNote {
+    display: none;
+  }
+
+  .cocktail,
+  .runClub {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: calc(100svh - 70px);
+    padding: 84px 18px;
+  }
+
+  .heroContent {
+    width: min(72vw, 280px);
+  }
+
+  .poster {
+    width: 96px;
+    height: 112px;
+    padding: 9px 7px;
+    border-radius: 12px;
+    transform: rotate(var(--tilt, 0deg));
+  }
+
+  .poster:hover,
+  .poster:focus-within,
+  .poster:active {
+    transform: scaleX(1.1) rotate(var(--tilt, 0deg));
+  }
+
+  .posterLink {
+    bottom: 6px;
+    padding: 5px 7px;
+    font-size: 8px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+
+  .poster::before {
+    inset: 5px;
+    border-radius: 8px;
+  }
+
+  .posterNote {
+    font-size: 6px;
+  }
+
+  .posterTitle {
+    display: flex;
+    font-size: 17px;
+  }
+
+  .hackathon,
+  .cocktail,
+  .dinner,
+  .runClub {
+    display: none;
+  }
+
+  .bookTalk {
+    top: 3%;
+    left: 4%;
+  }
+
+  .ninety {
+    top: 2%;
+    right: 4%;
+    width: 84px;
+    height: 100px;
+  }
+
+  .humanRobot {
+    top: auto;
+    bottom: 4%;
+    left: 4%;
+  }
+
+  .barbecue {
+    top: auto;
+    right: 4%;
+    bottom: 3%;
+    width: 84px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: clamp(32px, 8.5vw, 44px);
+  }
+
+  .miti {
+    font-size: clamp(20px, 5vw, 26px);
+  }
+
+  .description {
+    max-width: 100%;
+    margin: 8px auto 18px;
+    font-size: clamp(11px, 3.2vw, 13px);
+  }
+
+  .cta {
+    min-height: 40px;
+    padding: 0 18px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .poster,
+  .posterLink {
+    transition: none;
+  }
+}

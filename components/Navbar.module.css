@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Doppio+One&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sekuya&family=Share+Tech&family=Smooch+Sans:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+/* 4. Minimalist Top Bar Styling */
+.appleLikeNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 40px;
+  background: #111111;
+  color: rgb(205, 204, 204);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(241, 239, 239, 0.08);
+}
+
+.navbarInner {
+  position: relative;
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  overflow-x: auto;
+}
+
+.navItem {
+  font-size: 12px;
+  color: #d6d5d5;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.navItem:hover,
+.navItem.isActive {
+
+   font-weight: 500;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 760px) {
+  .navbarInner {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .navLinks {
+    gap: 16px;
+  }
+  .navActions {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 470px){
+  .navItem{
+    display: none;
+  }
+}
+
+.iconBtn {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1;
+}
+
+

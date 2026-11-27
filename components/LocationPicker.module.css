@@ -1,0 +1,149 @@
+.locationPicker {
+  position: relative;
+}
+
+.locationButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 150px;
+  padding: 6px 9px;
+  border: 1px solid rgba(15, 15, 15, 0.22);
+  border-radius: 999px;
+  background: transparent;
+  color: #e4e1e4;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.locationButton svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+}
+
+.locationButton span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.locationButton:hover,
+.locationButton:focus-visible {
+  border-color: #ff9a54;
+  outline: none;
+}
+
+.locationDialog {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 60;
+  width: min(340px, calc(100vw - 24px));
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  background: #1d1b1d;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  color: #f7f6f7;
+}
+
+.locationDialog h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.locationDialog > p {
+  margin: 6px 0 16px;
+  color: #aaa7ad;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.locationDialog form {
+  display: grid;
+  gap: 12px;
+}
+
+.locationDialog label {
+  display: grid;
+  gap: 6px;
+  color: #d7d4d7;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.locationDialog select,
+.locationDialog input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: #292629;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+
+.locationDialog select:disabled {
+  color: #858085;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cancelButton {
+  background: transparent;
+  color: #d7d4d7;
+}
+
+.saveButton {
+  background: #fff;
+  color: #171519;
+}
+
+.saveButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.error {
+  margin: 0;
+  color: #ff9292;
+  font-size: 12px;
+}
+
+.locationDialog .privacyNote {
+  margin: 12px 0 0;
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .locationButton {
+    max-width: 112px;
+    padding: 5px 7px;
+    font-size: 10px;
+  }
+
+  .locationDialog {
+    right: -88px;
+  }
+}

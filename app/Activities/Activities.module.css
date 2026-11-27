@@ -1,0 +1,80 @@
+.page {
+  min-height: calc(100svh - 40px);
+  padding: clamp(48px, 8vw, 104px) 24px;
+  background: #111111;
+  color: #f7f6f7;
+}
+
+.header,
+.grid {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #ff9a54;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.header > p:last-child {
+  max-width: 520px;
+  margin: 16px 0 0;
+  color: #aaa7ad;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 14px;
+}
+
+.activity {
+  min-height: 150px;
+  padding: 22px;
+  scroll-margin-top: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #292329, #1a1a1a 72%);
+}
+
+.activity h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.04em;
+}
+
+.activity p {
+  margin: 10px 0 0;
+  color: #aaa7ad;
+  font-size: 14px;
+}
+
+.activity:target {
+  border-color: #ff9a54;
+  box-shadow: 0 0 0 2px rgba(255, 154, 84, 0.16);
+}
+
+.homeLink {
+  display: inline-flex;
+  margin: 28px max(calc((100% - 1080px) / 2), 0px) 0;
+  color: #f7f6f7;
+  font-size: 14px;
+  text-underline-offset: 4px;
+}
